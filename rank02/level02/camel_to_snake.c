@@ -2,8 +2,14 @@
 
 void	camel_to_snake(char c)
 {
-	int i = 0;
-	
+	if (c >= 'A' && c <= 'Z')
+	{
+		write(1, &"_", 1);
+		c = c + 32;
+		write(1, &c, 1);
+	}
+	else
+		write(1, &c, 1);
 }
 
 int main(int argc, char *argv[])
